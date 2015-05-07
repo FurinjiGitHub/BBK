@@ -170,6 +170,7 @@
     <Content Include="Assets\bb.jpg" />
     <Content Include="Assets\Heads.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\Scatter.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\SquareTile150x150.png" />
     <Content Include="Assets\SquareTile71x71.png" />

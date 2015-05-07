@@ -31,7 +31,8 @@ namespace BBK
         private void Tails_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             CoinText.Text = "Tails";
-       
+            Flip.IsEnabled = true;
+
             //tailText.Text = "Tails";
             //tailText.Visibility = System.Windows.Visibility.Visible;
             //headsText.Visibility = System.Windows.Visibility.Collapsed;
@@ -41,6 +42,7 @@ namespace BBK
         private void Heads_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             CoinText.Text = "Heads";
+            Flip.IsEnabled = true;
 
             //headsText.Text = "Heads";
             //headsText.Visibility = System.Windows.Visibility.Visible;

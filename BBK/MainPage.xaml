@@ -166,7 +166,13 @@
                        Margin="92,488,0,0" Width="245" 
                        TextAlignment="Center"/>
 
-            <Button x:Name="Flip" Content="Flip the Coin" HorizontalAlignment="Left" Margin="125,525,0,0" VerticalAlignment="Top" Click="Flip_Click">
+            <Button x:Name="Flip" 
+                    Content="Flip the Coin" 
+                    HorizontalAlignment="Left" 
+                    Margin="125,525,0,0" 
+                    VerticalAlignment="Top" 
+                    Click="Flip_Click"
+                    IsEnabled="False">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
                         <ec:NavigateToPageAction TargetPage="/Instructions2.xaml"/>
