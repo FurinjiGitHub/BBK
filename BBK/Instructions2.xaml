@@ -24,23 +24,48 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Blood Bowl Kick Starter - Page 2/6" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Set Up" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Set Up" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="done" HorizontalAlignment="Left" Margin="350,525,0,0" VerticalAlignment="Top" Width="105">
+
+            <TextBlock x:Name="CoinResult"  
+                       HorizontalAlignment="Left" 
+                       Margin="158,100,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="Coin Toss Result" 
+                       VerticalAlignment="Top" 
+                       Width="166"/>
+            
+            <TextBlock Margin="10,148,10,0" 
+                       TextWrapping="Wrap" 
+                       Text="The Winner of the Coin Toss decides if he wants to be the kicker or the receiver. The receiving team has the first turn. &#13; &#13;1. The kicking team always sets up first  &#13;2. No more than two players may be set up in each wide zone &#13;3. At least three players must be set up next to the half way line, on the line of scrimmage &#13;&#13;After both teams have set up, the coach of the kicking team places the ball in any square in the opponent's half of the pitch, including the opponent's End Zone if he likes." 
+                       VerticalAlignment="Top" 
+                       Width="436"/>
+            
+            <!--Kuva, joka myös näyttää kolikonheiton tuloksen-->
+            <Image x:Name="CoinResultImage" 
+                   HorizontalAlignment="Left" 
+                   Height="100" 
+                   Margin="180,0,0,0" 
+                   VerticalAlignment="Top" 
+                   Width="100"/>
+
+
+            <Button Content="done" 
+                    HorizontalAlignment="Left" 
+                    Margin="341,525,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="105">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
                         <ec:NavigateToPageAction TargetPage="/KickOff3.xaml"/>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
-            <TextBlock x:Name="CoinResult"  HorizontalAlignment="Left" Margin="158,100,0,0" TextWrapping="Wrap" Text="Coin Toss Result" VerticalAlignment="Top" Width="166"/>
-            <TextBlock Margin="10,148,10,0" TextWrapping="Wrap" 
-                       Text="The Winner of the Coin Toss decides if he wants to be the kicker or the receiver. The receiving team has the first turn. &#13; &#13;1. The kicking team always sets up first  &#13;2. No more than two players may be set up in each wide zone &#13;3. At least three players must be set up next to the half way line, on the line of scrimmage &#13;&#13;After both teams have set up, the coach of the kicking team places the ball in any square in the opponent's half of the pitch, including the opponent's End Zone if he likes." 
-                       VerticalAlignment="Top" Width="436"/>
-            <Image x:Name="CoinResultImage" HorizontalAlignment="Left" Height="100" Margin="180,0,0,0" VerticalAlignment="Top" Width="100"/>
+            
+            
         </Grid>
     </Grid>
 

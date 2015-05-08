@@ -14,8 +14,6 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--Background="Transparent"-->
-
     <Grid x:Name="LayoutRoot" 
           Background="{StaticResource taustakuva}">
         <Grid.RowDefinitions>
@@ -50,10 +48,11 @@
 
             Before shipping remove this XAML and the image itself.-->
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+        
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Welcome to the Blood Bowl Kick Starter" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="Main Page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Main Page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0">
@@ -130,13 +129,13 @@
             
             
             <TextBlock HorizontalAlignment="Left" 
-                       Margin="28,45,0,0" 
+                       Margin="28,10,0,0" 
                        TextWrapping="Wrap" 
                        Text="The Blood Bowl Kick Starter is an app that helps you the get started with your game of Blood Bowl or to Kick-Off so to speak so you can get to the actual playing" 
                        VerticalAlignment="Top" 
                        Width="400"/>
             <TextBlock HorizontalAlignment="Left" 
-                       Margin="28,198,0,0" 
+                       Margin="28,240,0,0" 
                        TextWrapping="Wrap" 
                        Text="Let's get started! First you have to choose Heads or Tails  and then Flip the Coin. We will guide you through the rest" 
                        VerticalAlignment="Top" 
@@ -167,7 +166,7 @@
                        TextAlignment="Center"/>
 
             <Button x:Name="Flip" 
-                    Content="Flip the Coin" 
+                    Content="flip the coin" 
                     HorizontalAlignment="Left" 
                     Margin="125,525,0,0" 
                     VerticalAlignment="Top" 

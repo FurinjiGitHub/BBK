@@ -24,20 +24,51 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="BBK - Page 5/6" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Kick-Off Table" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Kick-Off Table" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
+       
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="done" HorizontalAlignment="Left" Margin="349,525,0,0" VerticalAlignment="Top" Width="105">
+
+            <TextBlock HorizontalAlignment="Left" 
+                       Margin="10,0,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="All kinds of things can happen during a Blood Bowl match. The Kick-Off Table is used to recreate these unforeseen but common events." 
+                       VerticalAlignment="Top" 
+                       Width="436"/>
+
+            <TextBlock x:Name="KickOffTitle" 
+                       HorizontalAlignment="Left" 
+                       Margin="10,101,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="Kick-Off Title" 
+                       VerticalAlignment="Top" 
+                       Width="436" 
+                       FontWeight="Bold" 
+                       TextAlignment="Center"/>
+
+            <TextBlock x:Name="KickOffBlock" 
+                       HorizontalAlignment="Left" 
+                       Margin="20,133,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="Kick-Off Table Result" 
+                       VerticalAlignment="Top" 
+                       Height="392" 
+                       Width="416"/>
+
+            <Button Content="done" 
+                    HorizontalAlignment="Left" 
+                    Margin="341,525,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="105">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
                         <ec:NavigateToPageAction TargetPage="/Bounce6.xaml"/>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
-            <TextBlock x:Name="noppatesti" HorizontalAlignment="Left" Margin="33,21,0,0" TextWrapping="Wrap" Text="plääplää potku" VerticalAlignment="Top" Width="402"/>
-            <TextBlock x:Name="KickOffBlock" HorizontalAlignment="Left" Margin="33,120,0,0" TextWrapping="Wrap" Text="Kick-Off Table Result" VerticalAlignment="Top" Height="378" Width="392"/>
+           
 
         </Grid>
     </Grid>

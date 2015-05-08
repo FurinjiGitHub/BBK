@@ -168,6 +168,7 @@
     </Content>
     <Content Include="Assets\BadgeLogo.png" />
     <Content Include="Assets\bb.jpg" />
+    <Content Include="Assets\bbScatterPP.png" />
     <Content Include="Assets\Heads.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\Scatter.png" />

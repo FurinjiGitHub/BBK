@@ -29,86 +29,123 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
            
-            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="The Ball hits the ground and bounces for 1 square. Place the device to the board and hit Bounce" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" 
+                       Margin="10,10,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="The Ball hits the ground and bounces for 1 square. Place the device to the board and hit Bounce. Then move the ball to the square indicated." 
+                       VerticalAlignment="Top"/>
+
+            <Rectangle Fill="White" 
+                       HorizontalAlignment="Left" 
+                       Height="100" 
+                       Margin="174,195,0,0" 
+                       Stroke="Black" 
+                       VerticalAlignment="Top" 
+                       Width="100" 
+                       Opacity="0.7"/>
 
             <Rectangle x:Name="ruutu1" 
-                       Fill="Blue" 
+                       Fill="White" 
                        HorizontalAlignment="Left" 
                        Height="100" 
                        Margin="74,95,0,0" 
                        Stroke="Black" 
                        VerticalAlignment="Top" 
                        Width="100"
-                       Visibility="Collapsed"/>
+                       Visibility="Collapsed"
+                       Opacity="0.7"/>
             <Rectangle x:Name="ruutu2"  
-                       Fill="Blue" 
+                       Fill="White"  
                        HorizontalAlignment="Left" 
                        Height="100" 
                        Margin="174,95,0,0" 
                        Stroke="Black" 
                        VerticalAlignment="Top" 
                        Width="100"
-                       Visibility="Collapsed"/>
+                       Visibility="Collapsed"
+                       Opacity="0.7"/>
             <Rectangle x:Name="ruutu3" 
-                       Fill="Blue" 
+                       Fill="White" 
                        HorizontalAlignment="Left" 
                        Height="100" 
                        Margin="274,95,0,0" 
                        Stroke="Black" 
                        VerticalAlignment="Top" 
                        Width="100"
-                       Visibility="Collapsed"/>
+                       Visibility="Collapsed"
+                       Opacity="0.7"/>
             <Rectangle x:Name="ruutu4" 
-                       Fill="Blue" 
-                       HorizontalAlignment="Left" 
-                       Height="100" 
-                       Margin="74,195,0,0" 
-                       Stroke="Black" 
-                       VerticalAlignment="Top" 
-                       Width="100"
-                       Visibility="Collapsed"/>
+        		        Fill="White" 
+        		        HorizontalAlignment="Left" 
+        		        Height="100" 
+        		        Margin="74,195,0,0" 
+        		        Stroke="Black" 
+        		        VerticalAlignment="Top" 
+        		        Width="100"
+        		        Visibility="Collapsed"
+        		        Opacity="0.7"/>
             <Rectangle x:Name="ruutu5"  
-                       Fill="Blue" 
-                       HorizontalAlignment="Left" 
-                       Height="100" 
-                       Margin="274,195,0,0" 
-                       Stroke="Black" 
-                       VerticalAlignment="Top" 
-                       Width="100"
-                       Visibility="Collapsed"/>
+        		        Fill="White" 
+        		        HorizontalAlignment="Left" 
+        		        Height="100" 
+        		        Margin="274,195,0,0" 
+        		        Stroke="Black" 
+        		        VerticalAlignment="Top" 
+        		        Width="100"
+        		        Visibility="Collapsed"
+        		        Opacity="0.7"/>
             <Rectangle x:Name="ruutu6" 
-                       Fill="Blue" 
-                       HorizontalAlignment="Left" 
-                       Height="100" 
-                       Margin="74,295,0,0" 
-                       Stroke="Black" 
-                       VerticalAlignment="Top" 
-                       Width="100"
-                       Visibility="Collapsed"/>
+        		        Fill="White" 
+        		        HorizontalAlignment="Left" 
+        		        Height="100" 
+        		        Margin="74,295,0,0" 
+        		        Stroke="Black" 
+        		        VerticalAlignment="Top" 
+        		        Width="100"
+        		        Visibility="Collapsed"
+        		        Opacity="0.7"/>
             <Rectangle x:Name="ruutu7" 
-                       Fill="Blue" 
-                       HorizontalAlignment="Left" 
-                       Height="100" 
-                       Margin="174,295,0,0" 
-                       Stroke="Black" 
-                       VerticalAlignment="Top" 
-                       Width="100"
-                       Visibility="Collapsed"/>
+        		        Fill="White" 
+        		        HorizontalAlignment="Left" 
+        		        Height="100" 
+        		        Margin="174,295,0,0" 
+        		        Stroke="Black" 
+        		        VerticalAlignment="Top" 
+        		        Width="100"
+        		        Visibility="Collapsed"
+        		        Opacity="0.7"/>
             <Rectangle x:Name="ruutu8"  
-                       Fill="Blue" 
+        		        Fill="White" 
+        		        HorizontalAlignment="Left" 
+        		        Height="100" 
+        		        Margin="274,295,0,0" 
+        		        Stroke="Black" 
+        		        VerticalAlignment="Top" 
+        		        Width="100"
+        		        Visibility="Collapsed"
+        		        Opacity="0.7"/>
+
+            <Image Source="Assets/bbScatterPP.png" 
+                   HorizontalAlignment="Left" 
+                   Height="300" 
+                   Margin="74,95,0,0" 
+                   VerticalAlignment="Top" 
+                   Width="300"/>
+
+
+            <Button Content="bounce" 
+                    HorizontalAlignment="Left" 
+                    Margin="54,415,0,0" 
+                    VerticalAlignment="Top" 
+                    Click="Button_Click"/>
+            
+            <TextBlock x:Name="BounceDirection" 
                        HorizontalAlignment="Left" 
-                       Height="100" 
-                       Margin="274,295,0,0" 
-                       Stroke="Black" 
+                       Margin="186,438,0,0" 
+                       TextWrapping="Wrap" 
+                       Text="Direction" 
                        VerticalAlignment="Top" 
-                       Width="100"
-                       Visibility="Collapsed"/>
-
-            <Image Source="Assets/Scatter.png"  HorizontalAlignment="Left" Height="256" Margin="98,117,0,0" VerticalAlignment="Top" Width="297"/>
-
-
-            <Button Content="Bounce" HorizontalAlignment="Left" Margin="54,415,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-            <TextBlock x:Name="BounceDirection" HorizontalAlignment="Left" Margin="186,438,0,0" TextWrapping="Wrap" Text="Direction" VerticalAlignment="Top" Width="188"/>
+                       Width="188"/>
 
         </Grid>
     </Grid>
