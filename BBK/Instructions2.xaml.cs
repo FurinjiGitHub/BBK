@@ -19,12 +19,10 @@ namespace BBK
            
         }
 
+        public string Coin { get; set; }
+
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            //base.OnNavigatedTo(e);
-           //string CoinSelect = NavigationContext.QueryString["CoinSelect"];
-            //bool Head_Checked = NavigationContext. ["Head_Checked"];
-           // bool Head_Checked;
 
             string CoinSelect = "";
             int Coin = new Random().Next(1, 3);
@@ -71,16 +69,8 @@ namespace BBK
             {
                 CoinResult.Text = "Hups";
             }
-          /*
-            if (Coin == 1)
-            {
-                CoinResult.Text = "Heads";
-            }
-            else
-            {
-                CoinResult.Text = "Tails";
-            }
-               */
+
         }
+
     }
 }

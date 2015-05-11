@@ -25,6 +25,7 @@ namespace BBK
         private void Flip_Click(object sender, RoutedEventArgs e)
         {
            NavigationService.Navigate(new Uri("/Instructions2.xaml?CoinSelect=" + CoinText.Text, UriKind.Relative));
+           //NavigationService.Navigate(new Uri("/ReCap.xaml?CoinSelect=" + CoinText, UriKind.Relative));
         }
 
     

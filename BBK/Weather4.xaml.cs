@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.IO.IsolatedStorage;
 
 namespace BBK
 {
@@ -49,6 +50,22 @@ namespace BBK
                 WeatherTitle.Text = "4-10. Nice";
                 WeatherBlock.Text = "Perfect Blood Bowl Weather.";
             }
+
+        }
+
+        private void Done_Click(object sender, RoutedEventArgs e)
+        {
+            IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+
+            if (!settings.Contains("userData2"))
+            {
+                settings.Add("userData2", WeatherTitle.Text);
+            }
+            else
+            {
+                settings["userData2"] = WeatherTitle.Text;
+            }
+            settings.Save();
 
         }
     }

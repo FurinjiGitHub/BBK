@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.IO.IsolatedStorage;
 
 namespace BBK
 {
@@ -86,6 +87,22 @@ namespace BBK
             {
                 KickOffBlock.Text = "Hups";
             }
+
+        }
+
+        private void Done_Click(object sender, RoutedEventArgs e)
+        {
+            IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+
+            if (!settings.Contains("userData3"))
+            {
+                settings.Add("userData3", KickOffTitle.Text);
+            }
+            else
+            {
+                settings["userData3"] = KickOffTitle.Text;
+            }
+            settings.Save();
 
         }
     }
