@@ -47,11 +47,11 @@
                 InputScope="Number"
 				HorizontalAlignment="Left" 
 				Height="72" 
-				Margin="255,187,0,0" 
+				Margin="317,187,0,0" 
 				TextWrapping="Wrap" 
 				Text="0" 
 				VerticalAlignment="Top" 
-				Width="178"/>
+				Width="67"/>
 
             <TextBlock HorizontalAlignment="Left" 
 				Margin="40,284,0,0" 
@@ -105,6 +105,8 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
+            <Button Content="-" HorizontalAlignment="Left" Margin="255,189,0,0" VerticalAlignment="Top" Width="62"/>
+            <Button Content="+" HorizontalAlignment="Left" Margin="384,189,0,0" VerticalAlignment="Top" Width="62"/>
 
 
 

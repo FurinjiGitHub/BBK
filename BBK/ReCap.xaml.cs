@@ -22,19 +22,19 @@ namespace BBK
         {
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData"))
             {
-                Fametin.Text +=
+                Fametin.Text = 
                 IsolatedStorageSettings.ApplicationSettings["userData"] as string;
             }
 
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData2"))
             {
-                WeatherTin.Text +=
+                WeatherTin.Text = "Current Weather: " +
                 IsolatedStorageSettings.ApplicationSettings["userData2"] as string;
             }
 
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData3"))
             {
-                KickTin.Text +=
+                KickTin.Text = "Kick-Off Table Result: " +
                 IsolatedStorageSettings.ApplicationSettings["userData3"] as string;
             }
 

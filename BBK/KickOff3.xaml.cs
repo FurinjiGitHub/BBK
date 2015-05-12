@@ -259,6 +259,8 @@ namespace BBK
             //Näin ei saatu tarpeeksi satunnaisia "noppatuloksia" kahteen eri heittoon
             //KickDirection.Text = new Random().Next(1, 9).ToString();
             //KickLenght.Text = new Random().Next(1, 7).ToString();
+
+           //Kick-nappulan sammutus kommentoitu, jotta testaaminen mukavampaa
            // KickButton.IsEnabled = false;
             done.IsEnabled = true;
         }
