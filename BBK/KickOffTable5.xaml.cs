@@ -20,6 +20,9 @@ namespace BBK
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
+
+
+
             Random satunnaisempi = new Random();
             int KickTableDice = satunnaisempi.Next(1, 7) + satunnaisempi.Next(1, 7);
 
@@ -30,7 +33,7 @@ namespace BBK
             if (KickTableDice == 2)
             {
                 KickOffTitle.Text = "2. Get the Ref";
-                KickOffBlock.Text = "The fans exact gruesome revenge on the referee for some of the dubious decisions he has made, either during this match or in the past. His replacement is so intimidated that he can be more easily persuaded to look the other way. Each team receives 1 additional Bribe to use during this game. A Bribe allows you to attempt to ignore one call by the referee for a player who has committed a foul to be sent off, or a player armed with a secret weapon to be banned from the match. Roll a D6: on a roll of 2-6 the bribe is effective (preventing a turnover if the player was ejected for fouling), but on a roll of 1 the bribe is wasted and the call still stands! Each bribe may be used once per match.";
+                KickOffBlock.Text = "The fans exact gruesome revenge on the referee for some of the dubious decisions he has made. His replacement is so intimidated that he can be more easily persuaded to look the other way. Each team receives 1 additional Bribe to use during this game. A Bribe allows you to attempt to ignore one call by the referee for a player who has committed a foul to be sent off, or a player armed with a secret weapon to be banned from the match. Roll a D6: on a roll of 2-6 the bribe is effective, but on a roll of 1 the bribe is wasted and the call still stands! Each bribe may be used once per match.";
             }
 
             else if (KickTableDice == 3)
@@ -74,12 +77,12 @@ namespace BBK
 
                 if (!settings.Contains("userData4"))
                 {
-                    settings.Add("userData4", WeatherDice);
+                    settings.Add("userData4", WeatherDice.ToString());
                    
                 }
                 else
                 {
-                    settings["userData4"] = WeatherDice;
+                    settings["userData4"] = WeatherDice.ToString();
                    
                 }
                 settings.Save();

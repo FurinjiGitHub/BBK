@@ -21,6 +21,18 @@ namespace BBK
 
                 
         }
+
+        private void collapseAll()
+        {
+            ruutu1.Visibility = System.Windows.Visibility.Collapsed;
+            ruutu2.Visibility = System.Windows.Visibility.Collapsed;
+            ruutu3.Visibility = System.Windows.Visibility.Collapsed;
+            ruutu4.Visibility = System.Windows.Visibility.Collapsed;
+            ruutu5.Visibility = System.Windows.Visibility.Collapsed;
+            ruutu6.Visibility = System.Windows.Visibility.Collapsed;
+            ruutu7.Visibility = System.Windows.Visibility.Collapsed;
+            ruutu8.Visibility = System.Windows.Visibility.Collapsed;
+        }
      
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -28,9 +40,12 @@ namespace BBK
 
             if (Convert.ToBoolean(Skill.IsChecked))
             {
+                //Näin ei saatu tarpeeksi satunnaisia "noppatuloksia" kahteen eri heittoon
+                //KickDirection.Text = new Random().Next(1, 9).ToString();
+                //KickLenght.Text = new Random().Next(1, 7).ToString();
                 
                 String SkillMuuttuja = satunnaisempi.Next(1, 7).ToString();
-                String RuutuApuri = satunnaisempi.Next(1, 9).ToString();
+                int RuutuApuri = satunnaisempi.Next(1, 9);
                 KickDirection.Text = "Direction: " + RuutuApuri;
              
 
@@ -59,215 +74,79 @@ namespace BBK
                     KickLenght.Text = "Length: 6 or 3 squares";
                 }
 
-                if (RuutuApuri == "1")
+                switch (RuutuApuri)
                 {
-                    ruutu1.Visibility = System.Windows.Visibility.Visible;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-
+                    case 1: collapseAll();
+                        ruutu1.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 2: collapseAll();
+                        ruutu2.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 3: collapseAll();
+                        ruutu3.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 4: collapseAll();
+                        ruutu4.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 5: collapseAll();
+                        ruutu5.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 6: collapseAll();
+                        ruutu6.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 7: collapseAll();
+                        ruutu7.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 8: collapseAll();
+                        ruutu8.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    default: collapseAll();
+                        KickDirection.Text = "hups";
+                        break;
                 }
-                else if (RuutuApuri == "2")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Visible;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "3")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Visible;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "4")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Visible;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "5")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Visible;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "6")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Visible;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "7")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Visible;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "8")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Visible;
-                }
-                else
-                {
-                    KickDirection.Text = "Hups";
-                }
-                
             }
             else
             {
-                String RuutuApuri = satunnaisempi.Next(1, 9).ToString();
+                int RuutuApuri = satunnaisempi.Next(1, 9);
                 KickDirection.Text = "Direction: " + RuutuApuri;
                 KickLenght.Text = "Length: " + satunnaisempi.Next(1, 7).ToString() + " squares";
 
-                if (RuutuApuri == "1")
+                switch (RuutuApuri)
                 {
-                    ruutu1.Visibility = System.Windows.Visibility.Visible;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-
+                    case 1: collapseAll();
+                        ruutu1.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 2: collapseAll();
+                        ruutu2.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 3: collapseAll();
+                        ruutu3.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 4: collapseAll();
+                        ruutu4.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 5: collapseAll();
+                        ruutu5.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 6: collapseAll();
+                        ruutu6.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 7: collapseAll();
+                        ruutu7.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    case 8: collapseAll();
+                        ruutu8.Visibility = System.Windows.Visibility.Visible;
+                        break;
+                    default: collapseAll();
+                        KickDirection.Text = "hups";
+                        break;
                 }
-                else if (RuutuApuri == "2")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Visible;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "3")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed; 
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Visible;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "4")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Visible;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "5")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Visible;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "6")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Visible;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "7")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Visible;
-                    ruutu8.Visibility = System.Windows.Visibility.Collapsed;
-                }
-                else if (RuutuApuri == "8")
-                {
-                    ruutu1.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu2.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu3.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu4.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu5.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu6.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu7.Visibility = System.Windows.Visibility.Collapsed;
-                    ruutu8.Visibility = System.Windows.Visibility.Visible;
-                }
-                else
-                {
-                    KickDirection.Text = "Hups";
-                }
+                
             }
            
-
-            //Näin ei saatu tarpeeksi satunnaisia "noppatuloksia" kahteen eri heittoon
-            //KickDirection.Text = new Random().Next(1, 9).ToString();
-            //KickLenght.Text = new Random().Next(1, 7).ToString();
-
            //Kick-nappulan sammutus kommentoitu, jotta testaaminen mukavampaa
            // KickButton.IsEnabled = false;
             done.IsEnabled = true;
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

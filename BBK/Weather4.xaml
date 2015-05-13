@@ -59,6 +59,11 @@
                        Height="270" 
                        Width="383"/>
 
+            <ProgressBar Value="62.5"
+                         Margin="10,525,0,0"
+                         Width="326"
+                         Foreground="White"
+                         HorizontalAlignment="Left"/>
 
             <Button x:Name="Done" Content="done" 
                     HorizontalAlignment="Left" 

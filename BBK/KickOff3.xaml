@@ -167,8 +167,13 @@
                       HorizontalAlignment="Left" 
                       Margin="39,399,0,0" 
                       VerticalAlignment="Top" 
-                      Checked="CheckBox_Checked" 
                       Width="381"/>
+
+            <ProgressBar Value="50"
+                         Margin="10,525,0,0"
+                         Width="326"
+                         Foreground="White"
+                         HorizontalAlignment="Left"/>
 
             <Button x:Name="done" 
                     Content="done" 

@@ -65,6 +65,18 @@ namespace BBK
             {
                 settings["userData2"] = WeatherTitle.Text;
             }
+            //settings.Save();
+
+            if (!settings.Contains("userData4"))
+            {
+                settings.Add("userData4", "2");
+
+            }
+            else
+            {
+                settings["userData4"] = "2";
+
+            }
             settings.Save();
 
         }

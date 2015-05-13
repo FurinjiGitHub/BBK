@@ -37,13 +37,15 @@
                        Text="Coin Toss Result" 
                        VerticalAlignment="Top" 
                        Width="166"/>
-            
+
+
             <TextBlock Margin="10,148,10,0" 
-                       TextWrapping="Wrap" 
+                       TextWrapping="Wrap"
                        Text="The Winner of the Coin Toss decides if he wants to be the kicker or the receiver. The receiving team has the first turn. &#13; &#13;1. The kicking team always sets up first  &#13;2. No more than two players may be set up in each wide zone &#13;3. At least three players must be set up next to the half way line, on the line of scrimmage &#13;&#13;After both teams have set up, the coach of the kicking team places the ball in any square in the opponent's half of the pitch, including the opponent's End Zone if he likes." 
                        VerticalAlignment="Top" 
                        Width="436"/>
-            
+
+
             <!--Kuva, joka myös näyttää kolikonheiton tuloksen-->
             <Image x:Name="CoinResultImage" 
                    HorizontalAlignment="Left" 
@@ -52,6 +54,11 @@
                    VerticalAlignment="Top" 
                    Width="100"/>
 
+            <ProgressBar Value="25"
+                         Margin="10,525,0,0"
+                         Width="326"
+                         Foreground="White"
+                         HorizontalAlignment="Left"/>
 
             <Button Content="done" 
                     HorizontalAlignment="Left" 
@@ -64,8 +71,9 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
+
             
-            
+
         </Grid>
     </Grid>
 
