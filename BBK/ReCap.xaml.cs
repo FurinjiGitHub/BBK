@@ -20,21 +20,22 @@ namespace BBK
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
+            //Sivulle tultaessa ladataan aikaisemmilla sivuilla tallennetut tiedot. Sovellus kerää vain sellaiset tiedot, joilla on merkitystä pelaajille myöhemmin pelin kuluessa
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData"))
             {
-                Fametin.Text = 
-                IsolatedStorageSettings.ApplicationSettings["userData"] as string;
+                Fametin.Text = "Fan Advantage ModifiEr: \n" +
+                IsolatedStorageSettings.ApplicationSettings["userData"] as string + "\r\n";
             }
 
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData2"))
             {
-                WeatherTin.Text = "Current Weather: " +
-                IsolatedStorageSettings.ApplicationSettings["userData2"] as string;
+                WeatherTin.Text = "Weather Condition at beginning was: \n" +
+                IsolatedStorageSettings.ApplicationSettings["userData2"] as string + "\r\n";
             }
 
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData3"))
             {
-                KickTin.Text = "Kick-Off Table Result: " +
+                KickTin.Text = "Kick-Off Table result was: \n" +
                 IsolatedStorageSettings.ApplicationSettings["userData3"] as string;
             }
 

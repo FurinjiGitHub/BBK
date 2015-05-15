@@ -32,7 +32,7 @@
             <TextBlock HorizontalAlignment="Left" 
 				Margin="10,10,0,0" 
 				TextWrapping="Wrap" 
-				Text="The Ball hits the ground and bounces for 1 square. Place the device to the board and hit Bounce. Then move the ball to the square indicated." 
+				Text="The Ball hits the ground and scatters for 1 square. Place the device on the board and hit 'bounce'. Then move the ball to the direction indicated." 
 				VerticalAlignment="Top"/>
 
             <Rectangle Fill="White" 
@@ -144,7 +144,7 @@
 				HorizontalAlignment="Left" 
 				Margin="186,438,0,0" 
 				TextWrapping="Wrap" 
-				Text="Direction" 
+				Text="Direction:" 
 				VerticalAlignment="Top" 
 				Width="188"/>
 

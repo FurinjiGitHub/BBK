@@ -15,64 +15,78 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="{StaticResource taustakuva}">
+    <Grid x:Name="LayoutRoot" 
+          Background="{StaticResource taustakuva}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Blood Bowl Kick Starter - Page 3/7" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="The Fans" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" 
+                    Margin="12,17,0,28">
+            <TextBlock Text="Blood Bowl Kick Starter - Page 3/7" 
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="The Fans" 
+                       Margin="9,-7,0,0" 
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" 
+              Grid.Row="1" 
+              Margin="12,0,12,0">
+            
             <TextBlock HorizontalAlignment="Left" 
-				Margin="10,10,0,0" 
-				TextWrapping="Wrap" 
-				Text="A large number of spectators attend every game of Blood Bowl, some to support one team, some to support another. Others just come to enjoy the spectacle. The number supporting one team compared to the other can have a big effect on the outcome of the game." 
-				VerticalAlignment="Top" 
-				Height="177" 
-				Width="436"/>
+				       Margin="10,10,0,0" 
+				       TextWrapping="Wrap" 
+				       Text="A large number of spectators attend every game of Blood Bowl, some to support one team, some to support another. Others just come to enjoy the spectacle. The number supporting one team compared to the other can have a big effect on the outcome of the game." 
+				       VerticalAlignment="Top" 
+				       Height="177" 
+				       Width="436"/>
 
             <TextBlock HorizontalAlignment="Left" 
-				Margin="40,212,0,0" 
-				TextWrapping="Wrap" 
-				Text="Your Teams Fan Factor:" 
-				VerticalAlignment="Top"/>
+				       Margin="66,210,0,0" 
+				       TextWrapping="Wrap" 
+				       Text="Your Teams Fan Factor:" 
+				       VerticalAlignment="Top" 
+                       FontWeight="Bold"/>
 
             <TextBox x:Name="UserFanFactor" 
-                InputScope="Number"
-				HorizontalAlignment="Left" 
-				Height="72" 
-				Margin="317,187,0,0" 
-				TextWrapping="Wrap" 
-				Text="0" 
-				VerticalAlignment="Top" 
-				Width="67"/>
+                     InputScope="Number"
+				     HorizontalAlignment="Left" 
+				     Height="72" 
+				     Margin="286,187,0,0" 
+				     TextWrapping="Wrap" 
+				     Text="0" 
+				     VerticalAlignment="Top" 
+				     Width="100" 
+                     LostFocus="UserFanFactor_LostFocus" 
+                     TextAlignment="Center"/>
 
             <TextBlock HorizontalAlignment="Left" 
-				Margin="40,284,0,0" 
-				TextWrapping="Wrap" 
-				Text="Opponents Fan factor:" 
-				VerticalAlignment="Top"/>
+				       Margin="73,282,0,0" 
+				       TextWrapping="Wrap" 
+				       Text="Opponents Fan Factor:" 
+				       VerticalAlignment="Top" 
+                       FontWeight="Bold"/>
 
             <TextBox x:Name="OpponentFanFactor" 
-				InputScope="Number"
-                HorizontalAlignment="Left" 
-				Height="72" 
-				Margin="255,259,0,0" 
-				TextWrapping="Wrap" 
-				Text="0" 
-				VerticalAlignment="Top" 
-				Width="178"/>
+				     InputScope="Number"
+                     HorizontalAlignment="Left" 
+				     Height="72" 
+				     Margin="286,259,0,0" 
+				     TextWrapping="Wrap" 
+				     Text="0" 
+				     VerticalAlignment="Top" 
+				     Width="100" 
+                     LostFocus="OpponentFanFactor_LostFocus" 
+                     TextAlignment="Center"/>
 
             <Button x:Name="Fans" 
                     Content="calculate fans" 
                     HorizontalAlignment="Left" 
-                    Margin="130,331,0,0" 
+                    Margin="131,331,0,0" 
                     VerticalAlignment="Top" 
                     Click="Fans_Click"/>
 
@@ -89,7 +103,8 @@
                        Margin="20,493,0,0" 
                        TextWrapping="Wrap" 
                        Text="" 
-                       VerticalAlignment="Top" Width="413"/>
+                       VerticalAlignment="Top" 
+                       Width="413"/>
 
             <ProgressBar Value="37.5"
                          Margin="10,525,0,0"
@@ -111,11 +126,7 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
-            <Button Content="-" HorizontalAlignment="Left" Margin="255,189,0,0" VerticalAlignment="Top" Width="62"/>
-            <Button Content="+" HorizontalAlignment="Left" Margin="384,189,0,0" VerticalAlignment="Top" Width="62"/>
-
-
-
+           
         </Grid>
     </Grid>
 

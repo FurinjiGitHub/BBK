@@ -15,7 +15,8 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="{StaticResource taustakuva}">
+    <Grid x:Name="LayoutRoot" 
+          Background="{StaticResource taustakuva}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -23,83 +24,54 @@
 
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Blood Bowl Kick Starter" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Summary" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" 
+                    Margin="12,17,0,28">
+            <TextBlock Text="Blood Bowl Kick Starter" 
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Summary" 
+                       Margin="9,-7,0,0" 
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" 
+              Grid.Row="1" 
+              Margin="12,0,12,0">
 
             <TextBlock HorizontalAlignment="Left" 
                        Margin="10,10,0,0" 
                        TextWrapping="Wrap" 
-                       Text="Here you can see a summary of information about your match that you might need later."
-                      
+                       Text="Here is some information that might come useful later in the match." 
                        VerticalAlignment="Top" 
-                       Width="436" Height="59"/>
+                       Width="436" Height="59" FontWeight="Bold"/>
 
-
-
-            <!--<TextBlock x:Name="Fametin" 
-				HorizontalAlignment="Left" 
-				Margin="10,99,0,0" 
-				TextWrapping="Wrap" 
-				Text="" 
-				VerticalAlignment="Top" 
-				Height="36" 
-				Width="436"/>
-              
-            <TextBlock x:Name="WeatherTin" 
-                       HorizontalAlignment="Left" 
-                       Margin="10,140,0,0" 
-                       TextWrapping="Wrap" 
-                       Text="" 
-                       VerticalAlignment="Top" 
-                       Height="63" 
-                       Width="436"/>
-
-            <TextBlock x:Name="KickTin" 
-                        HorizontalAlignment="Left" 
-                       Margin="10,236,0,0" 
-                       TextWrapping="Wrap" 
-                       Text="" 
-                       VerticalAlignment="Top" 
-                       Height="284" 
-                       Width="426"/>-->
-
-            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10,74,10,87">
+            <!--Suljetaan tekstikenttä ScrollViewerin sisään siltä varalta, jos raportoitavaa tekstiä tulee joskus niin paljon, ettei se mahtuisi ruutuun-->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                          Margin="10,74,10,87">
                 <StackPanel>
                     <TextBlock x:Name="Fametin" 
-				                HorizontalAlignment="Left" 
-				                
+				                HorizontalAlignment="Left" 				                
 				                TextWrapping="Wrap" 
 				                Text="" 
 				                VerticalAlignment="Top" 
-				                Height="36" 
 				                Width="436"/>
 
                     <TextBlock x:Name="WeatherTin" 
-                               HorizontalAlignment="Left" 
-                               
+                               HorizontalAlignment="Left"                              
                                TextWrapping="Wrap" 
                                Text="" 
                                VerticalAlignment="Top" 
-                               Height="63" 
                                Width="436"/>
 
                     <TextBlock x:Name="KickTin" 
-                                HorizontalAlignment="Left" 
-                      
+                                HorizontalAlignment="Left"                      
                                TextWrapping="Wrap" 
                                Text="" 
-                               VerticalAlignment="Top" 
-                   
+                               VerticalAlignment="Top"                   
                                Width="426"/>
                 </StackPanel>
             </ScrollViewer>
-
 
             <ProgressBar Value="100"
                          Margin="10,525,0,0"
@@ -120,7 +92,6 @@
             </Button>
 
         </Grid>
-
     </Grid>
 
 </phone:PhoneApplicationPage>

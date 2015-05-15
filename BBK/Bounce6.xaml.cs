@@ -40,21 +40,17 @@ namespace BBK
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData4"))
             {
                 BounceTesti = IsolatedStorageSettings.ApplicationSettings["userData4"] as string;
-
             }
 
             if ((BounceTesti == "4") || (BounceTesti == "5") || (BounceTesti == "6") || (BounceTesti == "7") || (BounceTesti == "8") || (BounceTesti == "9") || (BounceTesti == "10"))
-            {
-                
+            {            
                 Random satunnaisempi = new Random();
                 int RuutuApuri = satunnaisempi.Next(1, 9);
                 BounceDirection.Text = "Direction: " + RuutuApuri;
-                Nice.Text = "and now hit the Bounce again because the changing weather moves the ball one more square.";
+                Nice.Text = "The Weather Change earlier causes the ball to scatter again. Hit 'bounce' once more.";
                 
-
                 if (countteri < 2)
                 {
-
                     switch (RuutuApuri)
                     {
                         case 1: collapseAll();
@@ -82,7 +78,7 @@ namespace BBK
                             ruutu8.Visibility = System.Windows.Visibility.Visible;
                             break;
                         default: collapseAll();
-                            BounceDirection.Text = "hups";
+                            BounceDirection.Text = "Oops, Goblins broke something...";
                             break;                       
                    }              
                 }
@@ -90,7 +86,7 @@ namespace BBK
                 {
                     Bounce.IsEnabled = false;
                     done.IsEnabled = true;
-                    Nice.Text = "There you go good boy no run along";
+                    Nice.Text = "Now move the ball again and then you are done.";
 
                     switch (RuutuApuri)
                     {
@@ -119,7 +115,7 @@ namespace BBK
                             ruutu8.Visibility = System.Windows.Visibility.Visible;
                             break;
                         default: collapseAll();
-                            BounceDirection.Text = "hups";
+                            BounceDirection.Text = "Oops, Goblins broke something...";
                             break;
                     }   
                 }
@@ -160,11 +156,12 @@ namespace BBK
                         ruutu8.Visibility = System.Windows.Visibility.Visible;
                         break;
                     default: collapseAll();
-                        BounceDirection.Text = "hups";
+                        BounceDirection.Text = "Oops, Goblins broke something...";
                         break;
     
                 }
             }        
         }
+
     }
 }

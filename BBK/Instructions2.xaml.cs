@@ -15,62 +15,54 @@ namespace BBK
     {
         public Instructions2()
         {
-            InitializeComponent();
-           
+            InitializeComponent();         
         }
 
         public string Coin { get; set; }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-
             string CoinSelect = "";
             int Coin = new Random().Next(1, 3);
             if (NavigationContext.QueryString.TryGetValue("CoinSelect", out CoinSelect))
             
-
             if (CoinSelect == "Heads")
             {
                 if (Coin == 1)
                 {
-
                     BitmapImage kolikko = new BitmapImage(new Uri(@"Assets/Heads.png", UriKind.RelativeOrAbsolute));
                     CoinResultImage.Source = kolikko;
-
                     CoinResult.Text = "Heads! You Win";
                 }
                 else
                 {
                     BitmapImage kolikko = new BitmapImage(new Uri(@"Assets/Tails.png", UriKind.RelativeOrAbsolute));
                     CoinResultImage.Source = kolikko;
-
                     CoinResult.Text = "Tails! You Lose";
                 }
             }
+
             else if (CoinSelect == "Tails")
             {
                 if (Coin == 1)
                 {
                     BitmapImage kolikko = new BitmapImage(new Uri(@"Assets/Heads.png", UriKind.RelativeOrAbsolute));
                     CoinResultImage.Source = kolikko;
-
                     CoinResult.Text = "Heads! You Lose";
                 }
                 else
                 {
                     BitmapImage kolikko = new BitmapImage(new Uri(@"Assets/Tails.png", UriKind.RelativeOrAbsolute));
                     CoinResultImage.Source = kolikko;
-
                     CoinResult.Text = "Tails! You Win";
                 }
             }
 
             else
             {
-                CoinResult.Text = "Hups";
+                CoinResult.Text = "Ooops, Goblins broke something! Get back while you can!";
             }
 
         }
-
     }
 }

@@ -48,103 +48,56 @@
 
             Before shipping remove this XAML and the image itself.-->
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
-        
+
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Welcome to the Blood Bowl Kick Starter" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="Main Page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
+            <TextBlock Text="Welcome to the Blood Bowl Kick Starter" 
+                       Style="{StaticResource PhoneTextNormalStyle}" 
+                       Margin="12,0"/>
+            <TextBlock Text="Main Page" 
+                       Margin="9,-7,0,0" 
+                       Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0">
+        <Grid x:Name="ContentPanel" 
+              Grid.Row="1" 
+              Margin="12,0">
 
-            
-            <!--<StackPanel Orientation="Vertical">
-
-                <TextBlock HorizontalAlignment="Left" 
-                       Margin="20,20,0,0" 
-                       TextWrapping="Wrap" 
-                       Text="The Blood Bowl Kick Starter is an app that helps you the get started with your game of Blood Bowl or to Kick-Off so to speak so you can get to the actual playing" 
-                       VerticalAlignment="Top" 
-                       Width="400"/>
-                
-            <TextBlock HorizontalAlignment="Left" 
-                       Margin="20,20,0,0" 
-                       TextWrapping="Wrap" 
-                       Text="Let's get started! First you have to choose Heads or Tails  and then Flip the Coin. We will guide you through the rest" 
-                       VerticalAlignment="Top" 
-                       Width="400"/>
-
-
-                <StackPanel Orientation="Horizontal" >
-                    --><!--kuvat--><!--
-
-                    <StackPanel Orientation="Vertical">
-
-                        <Image Source="Assets/Heads.png"  
-                               HorizontalAlignment="Left" 
-                               Height="100" 
-                               Margin="110,50,0,0" 
-                               VerticalAlignment="Top" 
-                               Width="100"
-                               Tap="Heads_Tap"/>
-
-                        <TextBlock x:Name="headsText" 
-                                   HorizontalAlignment="Left" 
-                                   TextWrapping="Wrap" 
-                                   Text="" 
-                                   VerticalAlignment="Top" 
-                                   Margin="130,0,0,0" 
-                                   TextAlignment="Center"/>
-
-
-                    </StackPanel>
-                    <StackPanel Orientation="Vertical">
-
-
-                        <Image Source="Assets/Tails.png" 
-                               HorizontalAlignment="Left" 
-                               Height="100" 
-                               Margin="40,50,0,0" 
-                               VerticalAlignment="Top" 
-                               Width="100" 
-                               Tap="Tails_Tap"/>
-
-                        <TextBlock x:Name="tailText" 
-                                   HorizontalAlignment="Left" 
-                                   TextWrapping="Wrap" 
-                                   Text="" 
-                                   VerticalAlignment="Top" 
-                                   Margin="70,0,0,0" 
-                                   TextAlignment="Center"/>
-
-
-
-                    </StackPanel>                    
-                    
-                </StackPanel>
-
-            </StackPanel>-->
-            
-            
-            
-            
             <TextBlock HorizontalAlignment="Left" 
                        Margin="28,10,0,0" 
                        TextWrapping="Wrap" 
-                       Text="The Blood Bowl Kick Starter is an app that helps you the get started with your game of Blood Bowl or to Kick-Off so to speak so you can get to the actual playing" 
                        VerticalAlignment="Top" 
-                       Width="400"/>
+                       Width="400">
+                <Run>The</Run>
+                <Run FontWeight="Bold" Text=" Blood Bowl Kick Starter "/>
+                <Run>is an app that helps you the get started with your game of Blood Bowl or to 'Kick-Off' so to speak so you can get to the actual playing</Run>
+            </TextBlock>
+
             <TextBlock HorizontalAlignment="Left" 
-                       Margin="28,240,0,0" 
+                       Margin="10,227,0,0" 
                        TextWrapping="Wrap" 
-                       Text="Let's get started! First you have to choose Heads or Tails  and then Flip the Coin. We will guide you through the rest" 
+                       Text="Let's get started!" 
                        VerticalAlignment="Top" 
-                       Width="400"/>
-          
+                       Width="436" 
+                       FontWeight="Bold" 
+                       TextAlignment="Center"/>
+
+            <TextBlock HorizontalAlignment="Left" 
+                       Margin="10,273,0,0" 
+                       TextWrapping="Wrap" 
+                       VerticalAlignment="Top" 
+                       Width="436" TextAlignment="Center">
+                <Run>First you have to</Run> 
+                <Run FontWeight="Bold" Text=" choose Heads or Tails "/>  
+                <Run>and then</Run>
+                <Run FontWeight="Bold" Text=" 'flip the coin.'&#13;"/> 
+                <Run>We will guide you through the rest.</Run>
+            </TextBlock>
+
             <Image Source="Assets/Heads.png"  
                    HorizontalAlignment="Left" 
                    Height="100" 
-                   Margin="92,388,0,0" 
+                   Margin="91,388,0,0" 
                    VerticalAlignment="Top" 
                    Width="100"
                    Tap="Heads_Tap"/>
@@ -152,7 +105,7 @@
             <Image Source="Assets/Tails.png" 
                    HorizontalAlignment="Left" 
                    Height="100" 
-                   Margin="253,388,0,0" 
+                   Margin="258,388,0,0" 
                    VerticalAlignment="Top" 
                    Width="100" 
                    Tap="Tails_Tap"/>
@@ -162,13 +115,24 @@
                        TextWrapping="Wrap" 
                        Text="Heads or Tails?" 
                        VerticalAlignment="Top" 
-                       Margin="92,488,0,0" Width="245" 
+                       Margin="10,488,0,0" Width="436" 
                        TextAlignment="Center"/>
+
+            <Button Content="sum." 
+                    HorizontalAlignment="Left" 
+                    Margin="1,525,0,0" 
+                    VerticalAlignment="Top">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <ec:NavigateToPageAction TargetPage="/ReCap.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
 
             <Button x:Name="Flip" 
                     Content="flip the coin" 
                     HorizontalAlignment="Left" 
-                    Margin="125,525,0,0" 
+                    Margin="142,525,0,0" 
                     VerticalAlignment="Top" 
                     Click="Flip_Click"
                     IsEnabled="False">
@@ -180,8 +144,6 @@
             </Button>
 
         </Grid>
-
-
     </Grid>
 
 </phone:PhoneApplicationPage>

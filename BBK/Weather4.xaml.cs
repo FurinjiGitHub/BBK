@@ -22,6 +22,8 @@ namespace BBK
         {
             Random satunnaisempi = new Random();
             int WeatherDice = satunnaisempi.Next(1, 7) + satunnaisempi.Next(1, 7);
+
+            //Alla oleva koodirivi ei ole pätevä arvontaa varten, koska alkuperäisessä pelissä heitetään kahta kuusitahoista noppaa ja summataan tulokset yhteen. Näin ollen todennäköisyydet eivät olisi samat
             //int WeatherDice = new Random().Next(2, 13);
 
             if (WeatherDice == 2)
@@ -59,14 +61,15 @@ namespace BBK
 
             if (!settings.Contains("userData2"))
             {
-                settings.Add("userData2", WeatherTitle.Text);
+                settings.Add("userData2", WeatherTitle.Text + " - " + WeatherBlock.Text);
             }
             else
             {
-                settings["userData2"] = WeatherTitle.Text;
+                settings["userData2"] = WeatherTitle.Text + " - " + WeatherBlock.Text;
             }
-            //settings.Save();
 
+            //Tässä hieman keinotekoisesti varmistetaan userData4:n sopiva sisältö. 
+            //Jos arvoa ei tässä näin "alustettaisi" saattaisi joissain tapauksissa aiemmilla käyttökerroilla tallennettu tieto vaikuttaa myöhempien sivujen toimintoihin
             if (!settings.Contains("userData4"))
             {
                 settings.Add("userData4", "2");
@@ -80,5 +83,6 @@ namespace BBK
             settings.Save();
 
         }
+
     }
 }

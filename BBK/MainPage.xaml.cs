@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using BBK.Resources;
 
+
 namespace BBK
 {
     public partial class MainPage : PhoneApplicationPage
@@ -25,30 +26,18 @@ namespace BBK
         private void Flip_Click(object sender, RoutedEventArgs e)
         {
            NavigationService.Navigate(new Uri("/Instructions2.xaml?CoinSelect=" + CoinText.Text, UriKind.Relative));
-           //NavigationService.Navigate(new Uri("/ReCap.xaml?CoinSelect=" + CoinText, UriKind.Relative));
         }
 
-    
         private void Tails_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             CoinText.Text = "Tails";
-            Flip.IsEnabled = true;
-
-            //tailText.Text = "Tails";
-            //tailText.Visibility = System.Windows.Visibility.Visible;
-            //headsText.Visibility = System.Windows.Visibility.Collapsed;
-            
+            Flip.IsEnabled = true;           
         }
 
         private void Heads_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             CoinText.Text = "Heads";
-            Flip.IsEnabled = true;
-
-            //headsText.Text = "Heads";
-            //headsText.Visibility = System.Windows.Visibility.Visible;
-            //tailText.Visibility = System.Windows.Visibility.Collapsed;
-            
+            Flip.IsEnabled = true; 
         }
 
         // Sample code for building a localized ApplicationBar

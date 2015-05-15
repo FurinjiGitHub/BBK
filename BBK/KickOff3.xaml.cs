@@ -16,11 +16,6 @@ namespace BBK
         {
             InitializeComponent();
         }
-        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
-        {
-
-                
-        }
 
         private void collapseAll()
         {
@@ -48,7 +43,6 @@ namespace BBK
                 int RuutuApuri = satunnaisempi.Next(1, 9);
                 KickDirection.Text = "Direction: " + RuutuApuri;
              
-
                 if (SkillMuuttuja == "1")
                 {
                     KickLenght.Text = "Length: 1 or 0 squares";
@@ -105,6 +99,7 @@ namespace BBK
                         break;
                 }
             }
+
             else
             {
                 int RuutuApuri = satunnaisempi.Next(1, 9);
@@ -140,13 +135,13 @@ namespace BBK
                     default: collapseAll();
                         KickDirection.Text = "hups";
                         break;
-                }
-                
+                }    
             }
            
-           //Kick-nappulan sammutus kommentoitu, jotta testaaminen mukavampaa
+           //Kick-nappulan sammutus kommentoitu, jotta testaaminen olisi mielekkäämpää
            // KickButton.IsEnabled = false;
             done.IsEnabled = true;
         }
+
     }
 }
