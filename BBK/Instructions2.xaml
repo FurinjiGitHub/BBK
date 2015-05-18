@@ -67,8 +67,8 @@
                 <Run> may be set up in each wide zone</Run>
                 <Run FontWeight="Bold" Text="&#13;3. At least three players "/>
                 <Run>must be set up next to the half way line, on the line of scrimmage </Run>
-                <Run FontWeight="Bold" Text="&#13;&#13;After both teams have set up"/>
-                <Run>, the coach of the kicking team places the ball in any square in the opponent's half of the pitch, including the opponent's End Zone if he likes.</Run>
+                <Run FontWeight="Bold" Text="&#13;&#13;After both teams have set up, "/>
+                <Run>the coach of the kicking team places the ball in any square in the opponent's half of the pitch, including the opponent's End Zone if he likes.</Run>
             </TextBlock>
 
 
