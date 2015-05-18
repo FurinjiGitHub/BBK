@@ -68,19 +68,15 @@ namespace BBK
                 settings["userData2"] = WeatherTitle.Text + " - " + WeatherBlock.Text;
             }
 
-            //Tässä hieman keinotekoisesti varmistetaan userData4:n sopiva sisältö. 
-            //Jos arvoa ei tässä näin "alustettaisi" saattaisi joissain tapauksissa aiemmilla käyttökerroilla tallennettu tieto vaikuttaa myöhempien sivujen toimintoihin
-            if (!settings.Contains("userData4"))
-            {
-                settings.Add("userData4", "2");
+            //Tässä kohtaa tyhjennetään userData4, koska siihen saatetaan tallentaa seuraavalla sivulla.
+            //Tämä siksi, että aikaisempien käyttökertojen tulokset eivät vaikuttaisi tuloksiin vahingossa, 
+            //koska kaikissa tapauksissa seuraava sivu ei tallenna userData4:ään uutta sisältöä, mutta se kuitenkin tarkastetaan myöhemmissä vaiheissa
 
-            }
-            else
+            if (IsolatedStorageSettings.ApplicationSettings.Contains("userData4"))
             {
-                settings["userData4"] = "2";
-
+                IsolatedStorageSettings.ApplicationSettings.Remove("userData4");
             }
-            settings.Save();
+
 
         }
 
