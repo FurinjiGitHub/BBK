@@ -18,12 +18,14 @@ namespace BBK
             InitializeComponent();         
         }
 
-        public string Coin { get; set; }
-
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             string CoinSelect = "";
+
+            //Tehdään varsinainen kolikonheitto eli arvotaan ykkönen tai kakkonen
             int Coin = new Random().Next(1, 3);
+
+            //Vastaanotetaan edellisen sivun "lähettämä" valintateksti
             if (NavigationContext.QueryString.TryGetValue("CoinSelect", out CoinSelect))
             
             if (CoinSelect == "Heads")

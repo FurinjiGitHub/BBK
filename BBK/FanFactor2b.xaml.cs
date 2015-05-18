@@ -20,6 +20,8 @@ namespace BBK
 
         private void Fans_Click(object sender, RoutedEventArgs e)
         {
+            //Nappulaa painettaessa testaillaan myös, ettei käyttäjä pääse tekemään mitään typerää eli syöttämään jotain mitä ei pitäisi
+
             Random satunnaisempi = new Random();
             long testeri = 0;
             long testeri2 = 0;
@@ -121,6 +123,7 @@ namespace BBK
 
         private void UserFanFactor_LostFocus(object sender, RoutedEventArgs e)
         {
+            //Kun käyttäjä lähtee tekstikentästä testataan onko hän jättänyt sen tyhjäksi ja jos on, niin syötetään kenttään nolla.
             String nollaaja = UserFanFactor.Text;
             if (nollaaja == "")
             {
@@ -130,6 +133,7 @@ namespace BBK
 
         private void OpponentFanFactor_LostFocus(object sender, RoutedEventArgs e)
         {
+            //Kun käyttäjä lähtee tekstikentästä testataan onko hän jättänyt sen tyhjäksi ja jos on, niin syötetään kenttään nolla.
             String nollaaja = OpponentFanFactor.Text;
             if (nollaaja == "")
             {

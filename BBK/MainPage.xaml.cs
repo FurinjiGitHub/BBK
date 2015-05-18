@@ -25,6 +25,7 @@ namespace BBK
 
         private void Flip_Click(object sender, RoutedEventArgs e)
         {
+            //Navigoinnin yhteydessä "lähetetään" käyttäjän kruuna/klaava -valinta tekstimuodossa seuraavalle sivulle
            NavigationService.Navigate(new Uri("/Instructions2.xaml?CoinSelect=" + CoinText.Text, UriKind.Relative));
         }
 

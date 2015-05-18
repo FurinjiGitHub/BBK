@@ -68,9 +68,11 @@ namespace BBK
                 settings["userData2"] = WeatherTitle.Text + " - " + WeatherBlock.Text;
             }
 
-            //Tässä kohtaa tyhjennetään userData4, koska siihen saatetaan tallentaa seuraavalla sivulla.
+            //Tässä kohtaa tyhjennetään userData4 varmuuden vuoksi
             //Tämä siksi, että aikaisempien käyttökertojen tulokset eivät vaikuttaisi tuloksiin vahingossa, 
-            //koska kaikissa tapauksissa seuraava sivu ei tallenna userData4:ään uutta sisältöä, mutta se kuitenkin tarkastetaan myöhemmissä vaiheissa
+            //koska kaikissa tapauksissa seuraava sivu ei tallenna userData4:ään uutta sisältöä, 
+            //mutta sen sisältö kuitenkin joka tapauksessa tarkastetaan myöhemmissä vaiheissa ja näin estetään se, 
+            //että tarkistus käynnistäisi toimenpiteitä jonkun edellisen käyttökerran tiedon takia
 
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData4"))
             {
