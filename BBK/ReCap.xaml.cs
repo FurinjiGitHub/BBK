@@ -20,7 +20,7 @@ namespace BBK
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            //Sivulle tultaessa ladataan aikaisemmilla sivuilla tallennetut tiedot. Sovellus kerää vain sellaiset tiedot, joilla on merkitystä pelaajille myöhemmin pelin kuluessa
+            //Sivulle tultaessa ladataan aikaisemmilla sivuilla tallennetut tiedot. Sovellus kerää vain ne tiedot, joilla on merkitystä pelaajille myöhemmin pelin kuluessa
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData"))
             {
                 Fametin.Text = "Fan Advantage ModifiEr: \n" +
@@ -29,7 +29,7 @@ namespace BBK
 
             if (IsolatedStorageSettings.ApplicationSettings.Contains("userData2"))
             {
-                WeatherTin.Text = "Weather Condition at beginning was: \n" +
+                WeatherTin.Text = "Weather Condition at the beginning was: \n" +
                 IsolatedStorageSettings.ApplicationSettings["userData2"] as string + "\r\n";
             }
 

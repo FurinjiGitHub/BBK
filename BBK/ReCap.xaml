@@ -42,7 +42,7 @@
             <TextBlock HorizontalAlignment="Left" 
                        Margin="10,10,0,0" 
                        TextWrapping="Wrap" 
-                       Text="Here ýou can find a summary of information that might come useful during the match." 
+                       Text="Here you can find a summary of information that might come useful during the match." 
                        VerticalAlignment="Top" 
                        Width="436" Height="59" FontWeight="Bold"/>
 
